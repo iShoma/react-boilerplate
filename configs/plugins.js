@@ -43,6 +43,7 @@ const prod = [
   }),
   new BundleAnalyzerPlugin({
     analyzerMode: 'static',
+    openAnalyzer: false,
   }),
 ];
 
