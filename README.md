@@ -1,5 +1,5 @@
+[![Build Status](https://travis-ci.org/iShoma/react-boilerplate.svg?branch=master)](https://travis-ci.org/iShoma/react-boilerplate)
 # React boilerplate
-
 Quickstart react-redux template to build your modern web app.
 
 ## Features
