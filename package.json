@@ -24,6 +24,10 @@
   "bugs": {
     "url": "https://github.com/iShoma/react-boilerplate/issues"
   },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "homepage": "https://github.com/iShoma/react-boilerplate#readme",
   "devDependencies": {
     "@babel/core": "^7.3.4",
