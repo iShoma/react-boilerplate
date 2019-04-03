@@ -18,7 +18,7 @@ git clone https://github.com/iShoma/react-boilerplate.git <YOUR APP NAME>
 ```
 - Reset git history:
 ```
-rm -rm .git
+rm -rf .git
 git init
 ```
 - Install dependencies:
