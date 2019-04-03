@@ -4,6 +4,7 @@
 [![devDependencies Status](https://david-dm.org/ishoma/react-boilerplate/dev-status.svg)](https://david-dm.org/ishoma/react-boilerplate?type=dev)
 [![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Telegram: iShoma](https://img.shields.io/badge/iShoma-telegram-0088cc.svg)](https://t.me/ishoma)
 
 # React boilerplate
 Quickstart react-redux template to build your modern web app.
