@@ -2,6 +2,7 @@
 [![codecov](https://codecov.io/gh/iShoma/react-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/iShoma/react-boilerplate)
 [![dependencies Status](https://david-dm.org/ishoma/react-boilerplate/status.svg)](https://david-dm.org/ishoma/react-boilerplate)
 [![devDependencies Status](https://david-dm.org/ishoma/react-boilerplate/dev-status.svg)](https://david-dm.org/ishoma/react-boilerplate?type=dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # React boilerplate
 Quickstart react-redux template to build your modern web app.
