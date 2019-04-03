@@ -11,7 +11,7 @@
     "webpack:prod": "NODE_ENV=production webpack-cli",
     "webpack:dev": "NODE_ENV=development webpack-dev-server",
     "lint": "eslint ./src --ext .jsx --ext .js",
-    "jest": "jest",
+    "jest": "jest --passWithNoTests",
     "test": "npm run lint && npm run jest"
   },
   "repository": {
