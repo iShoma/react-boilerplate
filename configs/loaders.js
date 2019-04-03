@@ -6,12 +6,12 @@ const base = [];
 const dev = [
   {
     test: /\.jsx?$/,
-    use: ['happypack/loader?id=babel-fast-loader-dev', 'react-hot-loader/webpack'],
+    use: ['cache-loader', 'happypack/loader?id=babel-fast-loader-dev', 'react-hot-loader/webpack'],
     exclude: constants.nodeModules,
   },
   {
     test: /\.scss$/,
-    use: 'happypack/loader?id=style-fast-loader-dev',
+    use: ['cache-loader', 'happypack/loader?id=style-fast-loader-dev'],
     exclude: constants.nodeModules,
   },
 ];
