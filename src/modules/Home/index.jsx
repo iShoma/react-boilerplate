@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   constructor(props) {
@@ -12,7 +13,10 @@ class Home extends React.Component {
   render() {
     return (<div>123</div>);
   }
-
 }
+
+Home.propTypes = {
+  injectReducer: PropTypes.func.isRequired,
+};
 
 export default Home;
