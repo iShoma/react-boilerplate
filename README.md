@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/iShoma/react-boilerplate.svg?branch=master)](https://travis-ci.org/iShoma/react-boilerplate)
+[![codecov](https://codecov.io/gh/iShoma/react-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/iShoma/react-boilerplate)
 [![dependencies Status](https://david-dm.org/ishoma/react-boilerplate/status.svg)](https://david-dm.org/ishoma/react-boilerplate)
 [![devDependencies Status](https://david-dm.org/ishoma/react-boilerplate/dev-status.svg)](https://david-dm.org/ishoma/react-boilerplate?type=dev)
 
