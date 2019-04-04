@@ -3,15 +3,15 @@ import { hot } from 'react-hot-loader/root';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import load from '@loadable/component';
-import injectReducerToProps from '../helpers/injectReducerToProps';
+import { injectReducerToProps } from '../helpers';
 import configureStore from '../configureStore';
 
 const store = configureStore();
 store.dispatch({ type: 'INIT' });
 
-const injectComponent = injectReducerToProps(store.injectReducer);
+const inject = injectReducerToProps(store.injectReducer);
 
-const Home = injectComponent(load(() => import(/* webpackChunkName: "homepage" */ '../../modules/Home')));
+const Home = inject(load(() => import(/* webpackChunkName: "homepage" */ '../../modules/Home')));
 
 const App = () => (
   <Router>

@@ -5,6 +5,8 @@
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
   "env": {
-    "browser": true
-  }
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["jest"]
 }
