@@ -1,5 +1,7 @@
+/* eslint-disable max-len */
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
+const paths = require('./configs/paths');
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -24,7 +26,7 @@ module.exports = {
   collectCoverageFrom: ['**/*.{js,jsx}'],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: './coverage/',
+  coverageDirectory: paths.coverage,
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -106,7 +108,7 @@ module.exports = {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  rootDir: './src/',
+  rootDir: paths.src,
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
