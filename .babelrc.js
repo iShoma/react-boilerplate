@@ -12,6 +12,7 @@ const plugins = [
   '@babel/plugin-proposal-class-properties',
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-syntax-dynamic-import',
+  '@babel/plugin-proposal-optional-chaining',
   '@loadable/babel-plugin',
 ];
 
