@@ -1,5 +1,5 @@
 const paths = require('./paths');
 
 module.exports = {
-  client: `${paths.src}/client.jsx`,
+  client: ['react-hot-loader/patch', `${paths.src}/client.jsx`],
 };

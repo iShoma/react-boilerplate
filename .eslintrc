@@ -1,6 +1,9 @@
 {
-  "extends": "airbnb",
-  "parser": "babel-eslint",
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
@@ -8,5 +11,35 @@
     "browser": true,
     "jest/globals": true
   },
-  "plugins": ["jest"]
+  "plugins": ["react", "jest"],
+  "overrides": [
+    {
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb"
+      ],
+      "files": ["*.ts", "*.tsx"],
+      "plugins": ["react", "jest", "@typescript-eslint"],
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [
+              ".js",
+              ".jsx",
+              ".ts",
+              ".tsx"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }

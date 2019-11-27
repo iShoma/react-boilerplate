@@ -10,8 +10,16 @@ const dev = [
     exclude: constants.nodeModules,
   },
   {
+    test: /\.tsx?$/,
+    use: ['cache-loader', 'happypack/loader?id=babel-fast-loader-dev', 'react-hot-loader/webpack', 'ts-loader'],
+    exclude: constants.nodeModules,
+  },
+  {
     test: /\.scss$/,
-    use: ['cache-loader', 'happypack/loader?id=style-fast-loader-dev'],
+    use: [
+      'cache-loader',
+      'happypack/loader?id=style-fast-loader-dev',
+    ],
     exclude: constants.nodeModules,
   },
 ];
@@ -20,6 +28,11 @@ const prod = [
   {
     test: /\.jsx?$/,
     use: 'happypack/loader?id=babel-fast-loader-prod',
+    exclude: constants.nodeModules,
+  },
+  {
+    test: /\.tsx?$/,
+    use: ['happypack/loader?id=babel-fast-loader-prod', 'ts-loader'],
     exclude: constants.nodeModules,
   },
   {

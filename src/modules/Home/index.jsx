@@ -1,22 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { hot } from 'react-hot-loader/root';
+import styles from './home.scss';
+import sum from './sum';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-
-    props.injectReducer('home', (state = { a: 0 }) => ({
-      a: state.a + 1,
-    }));
-  }
-
   render() {
-    return (<div>123</div>);
+    return (<div className={styles.wrapper}>{ sum(1, 3) }</div>);
   }
 }
 
-Home.propTypes = {
-  injectReducer: PropTypes.func.isRequired,
-};
+Home.propTypes = {};
 
-export default Home;
+export default hot(Home);

@@ -3,6 +3,7 @@ const HappyPack = require('happypack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const constants = require('./constants');
 const system = require('./system');
@@ -18,7 +19,25 @@ const dev = [
   new HappyPack({
     id: 'style-fast-loader-dev',
     threadPool,
-    loaders: ['style-loader?sourceMap=true!css-loader?sourceMap=true!sass-loader?sourceMap=true'],
+    loaders: [
+      'style-loader?sourceMap=true',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+          modules: true,
+          importLoaders: 2,
+        },
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          sourceMap: true,
+          config: { path: 'src/js/postcss.config.js' },
+        },
+      },
+      'sass-loader?sourceMap=true',
+    ],
   }),
   new BundleAnalyzerPlugin({
     analyzerPort: constants.analyzerPort,
@@ -36,7 +55,22 @@ const prod = [
   new HappyPack({
     id: 'style-fast-loader-prod',
     threadPool,
-    loaders: ['css-loader', 'sass-loader'],
+    loaders: [
+      {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          importLoaders: 2,
+        },
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          config: { path: 'src/js/postcss.config.js' },
+        },
+      },
+      'sass-loader',
+    ],
   }),
   new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
@@ -57,6 +91,7 @@ module.exports = (mode) => {
       NODE_ENV: JSON.stringify(mode),
       'process.env.NODE_ENV': JSON.stringify(mode),
     }),
+    new StylelintPlugin(),
   ];
 
   if (mode === constants.prod) {

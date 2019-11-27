@@ -1,17 +1,16 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import load from '@loadable/component';
-import { injectReducerToProps } from '../helpers';
+import { hot } from 'react-hot-loader/root';
 import configureStore from '../configureStore';
+import './App.scss';
 
 const store = configureStore();
+
 store.dispatch({ type: 'INIT' });
 
-const inject = injectReducerToProps(store.injectReducer);
-
-const Home = inject(load(() => import(/* webpackChunkName: "homepage" */ '../../modules/Home')));
+const Home = load(() => import(/* webpackChunkName: "homepage" */ '../../modules/Home'));
 
 const App = () => (
   <Router>
@@ -23,5 +22,4 @@ const App = () => (
   </Router>
 );
 
-const AppPatched = (process.env.NODE_ENV === 'production') ? App : hot(App);
-export default AppPatched;
+export default hot(App);

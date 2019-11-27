@@ -3,7 +3,9 @@ const paths = require('./paths');
 
 module.exports = (mode) => {
   if (mode === constants.prod) {
-    return {};
+    return {
+      devtool: 'source-map',
+    };
   }
 
   return {

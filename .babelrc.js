@@ -18,6 +18,7 @@ const plugins = [
 
 if (mode === constants.dev) {
   plugins.push('react-hot-loader/babel');
+  presets.push('@babel/typescript')
 }
 
 module.exports = {

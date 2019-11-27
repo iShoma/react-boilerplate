@@ -10,9 +10,10 @@
 Quickstart react-redux template to build your modern web app.
 
 ## Features
-- React v16.8, React Router v5, Loadable components
-- Redux v4, Redux Thunk
-- Babel v7
+- React v16, React Router v5, Loadable components
+- Typescript and JavaScript
+- Redux, Redux Thunk
+- Babel
 - Webpack v4, Hot Reloading, Code Splitting, Optimized Development and Production build
 - ESlint, airbnb style guide
 - Jest

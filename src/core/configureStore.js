@@ -11,7 +11,7 @@ const staticReducers = {
   test: (state = {}) => state,
 };
 
-const createReducer = asyncReducers => combineReducers({
+const createReducer = (asyncReducers) => combineReducers({
   ...staticReducers,
   ...asyncReducers,
 });
